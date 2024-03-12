@@ -8,12 +8,6 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "zones" {
-  description = "Availability zones for the NAT gateway."
-  type        = list(string)
-  default     = ["1"]
-}
-
 variable "pip_allocation_method" {
   description = "The allocation method for the public IP."
   type        = string

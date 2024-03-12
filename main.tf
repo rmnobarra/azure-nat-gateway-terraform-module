@@ -12,7 +12,6 @@ resource "azurerm_nat_gateway" "nat_gateway" {
   resource_group_name     = var.resource_group_name
   sku_name                = var.natgateway_sku
   idle_timeout_in_minutes = var.natgateway_idle_timeout
-  zones                   = var.zones
 }
 
 resource "azurerm_nat_gateway_public_ip_association" "nat_gateway_pip_association" {
