@@ -4,6 +4,10 @@ resource "azurerm_public_ip" "nat_gateway_pip" {
   resource_group_name = var.resource_group_name
   allocation_method   = var.pip_allocation_method
   sku                 = var.pip_sku
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 resource "azurerm_nat_gateway" "nat_gateway" {
